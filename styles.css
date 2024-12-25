@@ -1,0 +1,226 @@
+/* Genel Ayarlar */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Slider */
+.slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 300px;
+}
+
+.slides {
+    display: flex;
+    width: 100%;
+    animation: slide 16s infinite linear;
+}
+
+.slides img {
+    width: 100%;
+    flex-shrink: 0;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Slider Animasyonu */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-100%); }
+    40% { transform: translateX(-200%); }
+    60% { transform: translateX(-300%); }
+    80% { transform: translateX(-400%); }
+    100% { transform: translateX(0); }
+}
+
+/* Call-to-action */
+.call-to-action {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.call-to-action .btn {
+    display: inline-block;
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Müşteri Mesajı */
+.musteri-mesaji {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+/* Hakkımızda ve Galeri */
+#hakkimizda, #galeri {
+    padding: 20px;
+    text-align: center;
+}
+
+/* İletişim ve Konum */
+#iletisim-konum {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.iletisim, .konum {
+    width: 45%;
+    margin: 10px;
+}
+
+.iletisim form {
+    display: flex;
+    flex-direction: column;
+}
+
+.iletisim form input, .iletisim form textarea {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 1em;
+}
+
+.iletisim form button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Galeri */
+.galeri-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 20px;
+}
+
+.galeri-grid img {
+    width: 100%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.galeri-grid img:hover {
+    transform: scale(1.1);
+}
+
+/* Galeri Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border: 5px solid #fff;
+    border-radius: 5px;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}
+
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+}
+
+.whatsapp-icon img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Etiketler */
+#tags {
+    padding: 30px;
+    text-align: center;
+    background: #f4f4f4;
+    margin-top: 20px;
+}
+
+#tags .tag-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#tags .tag-list a {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 15px;
+    background: #ff5722;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    font-size: 14px;
+}
+
+#tags .tag-list a:hover {
+    background: #e64a19;
+}
